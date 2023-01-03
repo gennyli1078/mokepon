@@ -4,19 +4,25 @@ let mascotaJugador
 let mascotaEnemigo 
 let vidasJugador = 3
 let vidasEnemigo = 3
+let botonFuego
+let botonAgua
+let botonTierra
 
 function iniciarJuego() {
     let botonMascotaJugador = document.getElementById('boton-mascota')
     botonMascotaJugador.addEventListener('click', seleccionarMascotaJugador)
 
-    let botonFuego = document.getElementById("boton-fuego");
+    botonFuego = document.getElementById("boton-fuego");
     botonFuego.addEventListener("click", function(){ataqueSeleccionJugador("FUEGO")});
 
-    let botonAgua = document.getElementById('boton-agua')
+    botonAgua = document.getElementById('boton-agua')
     botonAgua.addEventListener('click', function(){ataqueSeleccionJugador("AGUA")})
 
-    let botonTierra = document.getElementById('boton-tierra')
+    botonTierra = document.getElementById('boton-tierra')
     botonTierra.addEventListener('click', function(){ataqueSeleccionJugador("TIERRA")})
+
+    let botonReiniciar = document.getElementById('boton-reiniciar')
+    botonReiniciar.addEventListener('click', reiniciarJuego)
 }
 
 function seleccionarMascotaJugador() {
@@ -105,10 +111,15 @@ function combate(){
 }
 
 function revisarVidas() {
-    if (vidasJugador == 0) {
-        alert("lo siento PERDISTE 😭")
-    } else if (vidasEnemigo == 0) {
-        alert("Felicidades GANASTE 😃")
+    if (vidasJugador == 0 || vidasEnemigo == 0) {
+        if (vidasJugador == 0) {
+            alert("lo siento PERDISTE 😭")
+        } else if (vidasEnemigo == 0) {
+            alert("Felicidades GANASTE 😃")
+        }
+        botonFuego.disabled = true
+        botonAgua.disabled = true
+        botonTierra.disabled = true
     }
 }
 
@@ -119,6 +130,10 @@ function crearMensaje(resultado) {
     parrafo.innerHTML = "Tu mascota " + mascotaJugador + " atacó con " + ataqueJugador + ", la mascota del enemigo " + mascotaEnemigo + " atacó con " + ataqueEnemigo + " - " + resultado
 
     sectionMensajes.appendChild(parrafo)
+}
+
+function reiniciarJuego() {
+    location.reload()
 }
 
 function aleatorio(min, max) {
