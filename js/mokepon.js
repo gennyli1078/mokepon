@@ -20,7 +20,7 @@ function iniciarJuego() {
 
     let botonMascotaJugador = document.getElementById('boton-mascota')
     botonMascotaJugador.addEventListener('click', seleccionarMascotaJugador)
-
+    
     botonFuego = document.getElementById("boton-fuego");
     botonFuego.addEventListener("click", function(){ataqueSeleccionJugador("FUEGO")});
 
