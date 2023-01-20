@@ -35,7 +35,7 @@ function iniciarJuego() {
 }
 
 function seleccionarMascotaJugador() {
-    sectionSeleccionarAtaque.style.display = "block"
+    sectionSeleccionarAtaque.style.display = "flex"
 
     sectionSeleccionarMascota = document.getElementById('seleccionar-mascota')
     sectionSeleccionarMascota.style.display = "none"
