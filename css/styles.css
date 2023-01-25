@@ -28,6 +28,7 @@ body {
 .tarjetas, .tarjetas-de-ataque {
     display: flex;
     gap: 10px;
+    margin: 0px 0px 20px 0px;
 }
 
 .tarjeta-de-mokepon {
@@ -58,18 +59,18 @@ input{
     display: none;
 }
 
-input:checked + label {
+input:checked + label, .boton-de-ataque:active {
     background: #C147E9;
     border: 5px solid hotpink;
 }
 
-#boton-mascota {
+#boton-mascota, #boton-reiniciar {
     font-family: 'Carter One', cursive;
-    width: 250px;
+    width: 200px;
     height: 60px;
     background: transparent;
     padding: 5px;
-    margin: 30px;
+    margin: 10px;
     border: 4px solid white;
     color: white;
     border-radius: 30px;
@@ -98,8 +99,8 @@ input:checked + label {
 }
 
 #mensajes {
-    width: 300px;
-    height: 100px;
+    width: 500px;
+    height: 80px;
     background: #C147E9;
     font-size: 35px;
     border-radius: 40px;
@@ -107,7 +108,10 @@ input:checked + label {
     border: 10px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+}
+
+#resultado {
+    text-align: center;
 }
 
 .ataques {

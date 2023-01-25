@@ -101,22 +101,22 @@ function combate(){
     let spanVidasEnemigo = document.getElementById('vidas-enemigo')
 
     if (ataqueJugador == ataqueEnemigo) {
-        crearMensaje('EMPATE 🤝')
+        crearMensaje('EMPATASTE 🤝')
     } else if (ataqueJugador == 'FUEGO' && ataqueEnemigo == 'TIERRA') {
-        crearMensaje('GANASTE 🥇')
+        crearMensaje('GANASTE la partida 🥇')
         vidasEnemigo--
         spanVidasEnemigo.innerHTML = vidasEnemigo
     } else if (ataqueJugador == 'AGUA' && ataqueEnemigo == 'FUEGO') {
-        crearMensaje('GANASTE 🥇')
+        crearMensaje('GANASTE la partida 🥇')
         vidasEnemigo--
         spanVidasEnemigo.innerHTML = vidasEnemigo
     } else if (ataqueJugador == 'TIERRA' && ataqueEnemigo == 'AGUA') {
-        crearMensaje('GANASTE 🥇')
+        crearMensaje('GANASTE la partida 🥇')
         vidasEnemigo--
         spanVidasEnemigo.innerHTML = vidasEnemigo
     }
     else {
-        crearMensaje('PERDISTE 😭')
+        crearMensaje('PERDISTE la partida 😭')
         vidasJugador--
         spanVidasJugador.innerHTML = vidasJugador
     }
