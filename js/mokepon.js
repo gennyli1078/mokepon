@@ -127,14 +127,10 @@ function combate(){
 function revisarVidas() {
     if (vidasJugador == 0 || vidasEnemigo == 0) {
         if (vidasJugador == 0) {
-            alert("lo siento PERDISTE 😭")
+            crearMensajeFinal("lo siento PERDISTE 😭")
         } else if (vidasEnemigo == 0) {
-            alert("Felicidades GANASTE 😃")
+            crearMensajeFinal("Felicidades GANASTE 😃")
         }
-        botonFuego.disabled = true
-        botonAgua.disabled = true
-        botonTierra.disabled = true
-        sectionReiniciar.style.display = "block"
     }
 }
 
@@ -152,6 +148,16 @@ function crearMensaje(resultado) {
 
     ataquesDelJugador.appendChild(nuevoAtaqueDelJugador)
     ataquesDelEnemigo.appendChild(nuevoAtaqueDelEnemigo)
+}
+
+function crearMensajeFinal(resultadoFinal) {
+    let sectionMensajes = document.getElementById('resultado')
+    sectionMensajes.innerHTML = resultadoFinal
+
+    botonFuego.disabled = true
+    botonAgua.disabled = true
+    botonTierra.disabled = true
+    sectionReiniciar.style.display = "block"
 }
 
 function reiniciarJuego() {

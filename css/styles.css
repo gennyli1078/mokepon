@@ -25,7 +25,7 @@ body {
     margin: 15px;
 }
 
-.tarjetas {
+.tarjetas, .tarjetas-de-ataque {
     display: flex;
     gap: 10px;
 }
@@ -56,6 +56,11 @@ body {
 
 input{
     display: none;
+}
+
+input:checked + label {
+    background: #C147E9;
+    border: 5px solid hotpink;
 }
 
 #boton-mascota {
@@ -108,4 +113,16 @@ input{
 .ataques {
     display: grid;
     grid-template-columns: 100px 100px;
+}
+
+.ataques-jugador, .ataques-enemigo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (max-width: 360px) {
+    .tarjetas, .tarjetas-de-ataque {
+        flex-direction: column;
+    }
 }
