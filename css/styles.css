@@ -116,14 +116,14 @@ input:checked + label, .boton-de-ataque:active {
 
 .ataques {
     display: grid;
-    grid-template-columns: 200px 200px;
+    grid-template-columns: 200px 200px 300px;
     font-size: 30px;
     background: #e5b8f4;
     margin: 20px;
     border-radius: 20px;
 }
 
-.ataques-jugador, .ataques-enemigo {
+.ataques-jugador, .ataques-enemigo, .todos-los-mensajes{
     display: flex;
     flex-direction: column;
     align-items: center;
